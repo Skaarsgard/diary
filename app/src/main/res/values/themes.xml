@@ -1,0 +1,64 @@
+<resources>
+    <style name="Theme.App" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
+        <!-- 主色调 -->
+        <item name="colorPrimary">@color/primary_blue</item>
+        <item name="colorPrimaryVariant">@color/primary_blue_dark</item>
+        <item name="colorOnPrimary">@color/white</item>
+
+        <item name="popupTheme">@style/Theme.App.PopupOverlay</item>
+
+        <!-- 次色调 -->
+        <item name="colorSecondary">@color/secondary_blue</item>
+        <item name="colorSecondaryVariant">@color/secondary_blue_dark</item>
+        <item name="colorOnSecondary">@color/white</item>
+        <item name="android:windowBackground">@color/white</item>
+        <!-- 背景色 -->
+
+        <!--<item name="colorBackground">@color/colorBackground</item>-->
+        <item name="colorOnBackground">@color/neutral_900</item>
+
+        <!-- 表面色 -->
+        <item name="colorSurface">@color/white</item>
+        <item name="colorOnSurface">@color/neutral_900</item>
+
+        <!-- 状态栏颜色 -->
+        <item name="android:statusBarColor">@color/primary_blue_dark</item>
+
+        <!-- 导航栏颜色 -->
+        <item name="android:navigationBarColor">@color/primary_blue_dark</item>
+
+        <!-- 按钮样式 -->
+        <item name="materialButtonStyle">@style/App.Widget.Material3.Button</item>
+        <item name="titleTextColor">@color/neutral_400</item>
+        <item name="subtitleTextColor">@color/white</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="actionBarTheme">@style/Theme.App.AppBarOverlay</item>
+        <item name="toolbarStyle">@style/Widget.App.Toolbar</item>
+    </style>
+
+    <style name="App.Widget.Material3.Button" parent="Widget.Material3.Button">
+        <item name="cornerRadius">28dp</item>
+        <item name="rippleColor">@color/primary_blue_light</item>
+    </style>
+
+    <style name="Theme.App.AppBarOverlay" parent="ThemeOverlay.Material3.Dark.ActionBar">
+        <item name="android:textColorPrimary">@color/white</item>
+        <item name="android:textColorSecondary">@color/white</item>
+    </style>
+    <style name="Theme.App.PopupOverlay" parent="ThemeOverlay.Material3.Light">
+        <item name="android:textColor">@color/neutral_900</item>
+        <item name="android:background">@color/white</item>
+        <item name="android:popupBackground">@drawable/popup_background</item>
+    </style>
+
+    <style name="Theme.App.NoActionBar" parent="Theme.App">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="Widget.App.Toolbar" parent="Widget.MaterialComponents.Toolbar.Primary">
+        <item name="contentInsetStart">0dp</item>
+        <item name="contentInsetStartWithNavigation">0dp</item>
+    </style>
+</resources>

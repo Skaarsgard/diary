@@ -1,0 +1,53 @@
+plugins {
+    id 'com.android.application'
+    id 'androidx.navigation.safeargs'
+    id 'androidx.room'
+}
+
+android {
+    namespace 'com.app.diary'
+    compileSdk 35
+
+    defaultConfig {
+        applicationId "com.app.diary"
+        minSdk 21
+        targetSdk 34
+        versionCode 3
+        versionName "1.0.2"
+    }
+
+    room {
+        schemaDirectory "$projectDir/schemas"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+}
+
+dependencies {
+    implementation 'com.google.android.material:material:1.9.0'
+
+    implementation 'com.github.bumptech.glide:glide:4.12.0'
+    implementation 'com.squareup.okhttp3:okhttp:4.9.3'
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.12.0'
+    implementation 'androidx.appcompat:appcompat:1.6.1'
+    implementation 'com.google.android.material:material:1.10.0'
+    implementation 'androidx.lifecycle:lifecycle-livedata-ktx:2.6.1'
+    implementation 'androidx.lifecycle:lifecycle-viewmodel-ktx:2.6.1'
+    implementation 'androidx.navigation:navigation-fragment:2.7.7'
+    implementation 'androidx.navigation:navigation-ui:2.7.7'
+    implementation 'androidx.room:room-runtime:2.6.1'
+    implementation 'androidx.room:room-rxjava3:2.6.1'
+    annotationProcessor 'androidx.room:room-compiler:2.6.1'
+    implementation 'io.reactivex.rxjava3:rxjava:3.1.8'
+    implementation 'io.reactivex.rxjava3:rxandroid:3.0.2'
+}

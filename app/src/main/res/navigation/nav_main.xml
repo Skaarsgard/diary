@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_graph"
+    app:startDestination="@+id/index_fragment">
+
+    <fragment
+        android:id="@+id/index_fragment"
+        android:name="com.app.diary.ui.IndexFragment"
+        android:label="首页"
+        tools:layout="@layout/fragment_index">
+
+        <action
+            android:id="@+id/diary_list_action"
+            app:destination="@id/diary_list_fragment" />
+
+        <action
+            android:id="@+id/diary_edit_action"
+            app:destination="@id/diary_edit_fragment" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/diary_list_fragment"
+        android:name="com.app.diary.ui.DiaryListFragment"
+        android:label="日记列表页"
+        tools:layout="@layout/fragment_diary_list">
+
+        <action
+            android:id="@+id/diary_browse_action"
+            app:destination="@id/diary_browse_fragment" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/diary_browse_fragment"
+        android:name="com.app.diary.ui.DiaryBrowseFragment"
+        android:label="日记浏览页"
+        tools:layout="@layout/fragment_diary_browse">
+
+        <argument
+            android:name="diaryId"
+            app:argType="long" />
+
+        <action
+            android:id="@+id/diary_edit_action"
+            app:destination="@id/diary_edit_fragment" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/diary_edit_fragment"
+        android:name="com.app.diary.ui.DiaryEditFragment"
+        android:label="日记编辑页"
+        tools:layout="@layout/fragment_diary_edit">
+
+        <argument
+            android:name="diaryId"
+            app:argType="long" />
+
+    </fragment>
+
+</navigation>
